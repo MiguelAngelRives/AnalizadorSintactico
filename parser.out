@@ -1,0 +1,970 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    CRUZ
+    DER
+    DIVISION
+    INTGR
+    MAGNITUD
+    MAG_V
+    MGN
+    MULTIPLICACION
+    NORMALIZA
+    NORM_V
+    PRC
+    PRD
+    PRINTER_TEXTO
+    PRP
+    PUNTO
+    RESTA
+    RES_V
+    SUMA
+
+Grammar
+
+Rule 0     S' -> expression
+Rule 1     expression -> VALI PARIZQ ID PARDER PNTCOM
+Rule 2     expression -> SUMA_RESULTADO IGL SUM PUNT ID PUNT ID PNTCOM
+Rule 3     expression -> RESTA_RESULTADO IGL RES PUNT ID PUNT ID PNTCOM
+Rule 4     expression -> MULTIPLICACION_RESULTADO IGL MULT PUNT ID PUNT ID PNTCOM
+Rule 5     expression -> DIVISION_RESULTADO IGL DIV PUNT ID PUNT ID PNTCOM
+Rule 6     expression -> ID IGL CORIZQ NUM COMA NUM CORDER PNTCOM
+Rule 7     expression -> PRINTER PARIZQ TEXTO PARDER PNTCOM
+Rule 8     expression -> TOTAL IGL ID AND ID PNTCOM
+Rule 9     expression -> ID IGL LISTA_NUMS
+Rule 10    expression -> MEDIANA IGL MEDIANA PUNT ID PNTCOM
+Rule 11    expression -> MODA IGL MODA PUNT ID PNTCOM
+Rule 12    expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM
+Rule 13    expression -> MEDIA IGL MEDIA PUNT ID PNTCOM
+Rule 14    expression -> VARIANZA IGL VARIANZA PUNT ID PNTCOM
+Rule 15    expression -> RANGO IGL RANGO PUNT ID PNTCOM
+Rule 16    expression -> ID IGL NUM PNTCOM
+Rule 17    expression -> IMPRIMIR PARIZQ TEXTO PARDER PNTCOM
+Rule 18    expression -> IMPRIMIR PARIZQ CRUZ_V PARDER PNTCOM
+Rule 19    expression -> IMPRIMIR PARIZQ SUM_V PARDER PNTCOM
+
+Terminals, with rules where they appear
+
+AND                  : 8
+COMA                 : 6 12 12 12 12
+CORDER               : 6
+CORIZQ               : 6
+CRUZ                 : 
+CRUZ_V               : 18
+DER                  : 
+DIV                  : 5
+DIVISION             : 
+DIVISION_RESULTADO   : 5
+ID                   : 1 2 2 3 3 4 4 5 5 6 8 8 9 10 11 12 13 14 15 16
+IGL                  : 2 3 4 5 6 8 9 10 11 13 14 15 16
+IMPRIMIR             : 17 18 19
+INTGR                : 
+LISTA_NUMS           : 9
+MAGNITUD             : 
+MAG_V                : 
+MEDIA                : 12 13 13
+MEDIANA              : 10 10 12
+MGN                  : 
+MODA                 : 11 11 12
+MOSTRAR              : 12
+MULT                 : 4
+MULTIPLICACION       : 
+MULTIPLICACION_RESULTADO : 4
+NORMALIZA            : 
+NORM_V               : 
+NUM                  : 6 6 16
+PARDER               : 1 7 12 17 18 19
+PARIZQ               : 1 7 12 17 18 19
+PNTCOM               : 1 2 3 4 5 6 7 8 10 11 12 13 14 15 16 17 18 19
+PRC                  : 
+PRD                  : 
+PRINTER              : 7
+PRINTER_TEXTO        : 
+PRP                  : 
+PUNT                 : 2 2 3 3 4 4 5 5 10 11 12 13 14 15
+PUNTO                : 
+RANGO                : 12 15 15
+RES                  : 3
+RESTA                : 
+RESTA_RESULTADO      : 3
+RES_V                : 
+SUM                  : 2
+SUMA                 : 
+SUMA_RESULTADO       : 2
+SUM_V                : 19
+TEXTO                : 7 17
+TOTAL                : 8
+VALI                 : 1
+VARIANZA             : 12 14 14
+error                : 
+
+Nonterminals, with rules where they appear
+
+expression           : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . expression
+    (1) expression -> . VALI PARIZQ ID PARDER PNTCOM
+    (2) expression -> . SUMA_RESULTADO IGL SUM PUNT ID PUNT ID PNTCOM
+    (3) expression -> . RESTA_RESULTADO IGL RES PUNT ID PUNT ID PNTCOM
+    (4) expression -> . MULTIPLICACION_RESULTADO IGL MULT PUNT ID PUNT ID PNTCOM
+    (5) expression -> . DIVISION_RESULTADO IGL DIV PUNT ID PUNT ID PNTCOM
+    (6) expression -> . ID IGL CORIZQ NUM COMA NUM CORDER PNTCOM
+    (7) expression -> . PRINTER PARIZQ TEXTO PARDER PNTCOM
+    (8) expression -> . TOTAL IGL ID AND ID PNTCOM
+    (9) expression -> . ID IGL LISTA_NUMS
+    (10) expression -> . MEDIANA IGL MEDIANA PUNT ID PNTCOM
+    (11) expression -> . MODA IGL MODA PUNT ID PNTCOM
+    (12) expression -> . MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM
+    (13) expression -> . MEDIA IGL MEDIA PUNT ID PNTCOM
+    (14) expression -> . VARIANZA IGL VARIANZA PUNT ID PNTCOM
+    (15) expression -> . RANGO IGL RANGO PUNT ID PNTCOM
+    (16) expression -> . ID IGL NUM PNTCOM
+    (17) expression -> . IMPRIMIR PARIZQ TEXTO PARDER PNTCOM
+    (18) expression -> . IMPRIMIR PARIZQ CRUZ_V PARDER PNTCOM
+    (19) expression -> . IMPRIMIR PARIZQ SUM_V PARDER PNTCOM
+
+    VALI            shift and go to state 2
+    SUMA_RESULTADO  shift and go to state 4
+    RESTA_RESULTADO shift and go to state 5
+    MULTIPLICACION_RESULTADO shift and go to state 6
+    DIVISION_RESULTADO shift and go to state 7
+    ID              shift and go to state 3
+    PRINTER         shift and go to state 8
+    TOTAL           shift and go to state 9
+    MEDIANA         shift and go to state 10
+    MODA            shift and go to state 11
+    MOSTRAR         shift and go to state 12
+    MEDIA           shift and go to state 13
+    VARIANZA        shift and go to state 14
+    RANGO           shift and go to state 15
+    IMPRIMIR        shift and go to state 16
+
+    expression                     shift and go to state 1
+
+state 1
+
+    (0) S' -> expression .
+
+
+
+state 2
+
+    (1) expression -> VALI . PARIZQ ID PARDER PNTCOM
+
+    PARIZQ          shift and go to state 17
+
+
+state 3
+
+    (6) expression -> ID . IGL CORIZQ NUM COMA NUM CORDER PNTCOM
+    (9) expression -> ID . IGL LISTA_NUMS
+    (16) expression -> ID . IGL NUM PNTCOM
+
+    IGL             shift and go to state 18
+
+
+state 4
+
+    (2) expression -> SUMA_RESULTADO . IGL SUM PUNT ID PUNT ID PNTCOM
+
+    IGL             shift and go to state 19
+
+
+state 5
+
+    (3) expression -> RESTA_RESULTADO . IGL RES PUNT ID PUNT ID PNTCOM
+
+    IGL             shift and go to state 20
+
+
+state 6
+
+    (4) expression -> MULTIPLICACION_RESULTADO . IGL MULT PUNT ID PUNT ID PNTCOM
+
+    IGL             shift and go to state 21
+
+
+state 7
+
+    (5) expression -> DIVISION_RESULTADO . IGL DIV PUNT ID PUNT ID PNTCOM
+
+    IGL             shift and go to state 22
+
+
+state 8
+
+    (7) expression -> PRINTER . PARIZQ TEXTO PARDER PNTCOM
+
+    PARIZQ          shift and go to state 23
+
+
+state 9
+
+    (8) expression -> TOTAL . IGL ID AND ID PNTCOM
+
+    IGL             shift and go to state 24
+
+
+state 10
+
+    (10) expression -> MEDIANA . IGL MEDIANA PUNT ID PNTCOM
+
+    IGL             shift and go to state 25
+
+
+state 11
+
+    (11) expression -> MODA . IGL MODA PUNT ID PNTCOM
+
+    IGL             shift and go to state 26
+
+
+state 12
+
+    (12) expression -> MOSTRAR . PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM
+
+    PARIZQ          shift and go to state 27
+
+
+state 13
+
+    (13) expression -> MEDIA . IGL MEDIA PUNT ID PNTCOM
+
+    IGL             shift and go to state 28
+
+
+state 14
+
+    (14) expression -> VARIANZA . IGL VARIANZA PUNT ID PNTCOM
+
+    IGL             shift and go to state 29
+
+
+state 15
+
+    (15) expression -> RANGO . IGL RANGO PUNT ID PNTCOM
+
+    IGL             shift and go to state 30
+
+
+state 16
+
+    (17) expression -> IMPRIMIR . PARIZQ TEXTO PARDER PNTCOM
+    (18) expression -> IMPRIMIR . PARIZQ CRUZ_V PARDER PNTCOM
+    (19) expression -> IMPRIMIR . PARIZQ SUM_V PARDER PNTCOM
+
+    PARIZQ          shift and go to state 31
+
+
+state 17
+
+    (1) expression -> VALI PARIZQ . ID PARDER PNTCOM
+
+    ID              shift and go to state 32
+
+
+state 18
+
+    (6) expression -> ID IGL . CORIZQ NUM COMA NUM CORDER PNTCOM
+    (9) expression -> ID IGL . LISTA_NUMS
+    (16) expression -> ID IGL . NUM PNTCOM
+
+    CORIZQ          shift and go to state 33
+    LISTA_NUMS      shift and go to state 35
+    NUM             shift and go to state 34
+
+
+state 19
+
+    (2) expression -> SUMA_RESULTADO IGL . SUM PUNT ID PUNT ID PNTCOM
+
+    SUM             shift and go to state 36
+
+
+state 20
+
+    (3) expression -> RESTA_RESULTADO IGL . RES PUNT ID PUNT ID PNTCOM
+
+    RES             shift and go to state 37
+
+
+state 21
+
+    (4) expression -> MULTIPLICACION_RESULTADO IGL . MULT PUNT ID PUNT ID PNTCOM
+
+    MULT            shift and go to state 38
+
+
+state 22
+
+    (5) expression -> DIVISION_RESULTADO IGL . DIV PUNT ID PUNT ID PNTCOM
+
+    DIV             shift and go to state 39
+
+
+state 23
+
+    (7) expression -> PRINTER PARIZQ . TEXTO PARDER PNTCOM
+
+    TEXTO           shift and go to state 40
+
+
+state 24
+
+    (8) expression -> TOTAL IGL . ID AND ID PNTCOM
+
+    ID              shift and go to state 41
+
+
+state 25
+
+    (10) expression -> MEDIANA IGL . MEDIANA PUNT ID PNTCOM
+
+    MEDIANA         shift and go to state 42
+
+
+state 26
+
+    (11) expression -> MODA IGL . MODA PUNT ID PNTCOM
+
+    MODA            shift and go to state 43
+
+
+state 27
+
+    (12) expression -> MOSTRAR PARIZQ . MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM
+
+    MODA            shift and go to state 44
+
+
+state 28
+
+    (13) expression -> MEDIA IGL . MEDIA PUNT ID PNTCOM
+
+    MEDIA           shift and go to state 45
+
+
+state 29
+
+    (14) expression -> VARIANZA IGL . VARIANZA PUNT ID PNTCOM
+
+    VARIANZA        shift and go to state 46
+
+
+state 30
+
+    (15) expression -> RANGO IGL . RANGO PUNT ID PNTCOM
+
+    RANGO           shift and go to state 47
+
+
+state 31
+
+    (17) expression -> IMPRIMIR PARIZQ . TEXTO PARDER PNTCOM
+    (18) expression -> IMPRIMIR PARIZQ . CRUZ_V PARDER PNTCOM
+    (19) expression -> IMPRIMIR PARIZQ . SUM_V PARDER PNTCOM
+
+    TEXTO           shift and go to state 48
+    CRUZ_V          shift and go to state 49
+    SUM_V           shift and go to state 50
+
+
+state 32
+
+    (1) expression -> VALI PARIZQ ID . PARDER PNTCOM
+
+    PARDER          shift and go to state 51
+
+
+state 33
+
+    (6) expression -> ID IGL CORIZQ . NUM COMA NUM CORDER PNTCOM
+
+    NUM             shift and go to state 52
+
+
+state 34
+
+    (16) expression -> ID IGL NUM . PNTCOM
+
+    PNTCOM          shift and go to state 53
+
+
+state 35
+
+    (9) expression -> ID IGL LISTA_NUMS .
+
+    $end            reduce using rule 9 (expression -> ID IGL LISTA_NUMS .)
+
+
+state 36
+
+    (2) expression -> SUMA_RESULTADO IGL SUM . PUNT ID PUNT ID PNTCOM
+
+    PUNT            shift and go to state 54
+
+
+state 37
+
+    (3) expression -> RESTA_RESULTADO IGL RES . PUNT ID PUNT ID PNTCOM
+
+    PUNT            shift and go to state 55
+
+
+state 38
+
+    (4) expression -> MULTIPLICACION_RESULTADO IGL MULT . PUNT ID PUNT ID PNTCOM
+
+    PUNT            shift and go to state 56
+
+
+state 39
+
+    (5) expression -> DIVISION_RESULTADO IGL DIV . PUNT ID PUNT ID PNTCOM
+
+    PUNT            shift and go to state 57
+
+
+state 40
+
+    (7) expression -> PRINTER PARIZQ TEXTO . PARDER PNTCOM
+
+    PARDER          shift and go to state 58
+
+
+state 41
+
+    (8) expression -> TOTAL IGL ID . AND ID PNTCOM
+
+    AND             shift and go to state 59
+
+
+state 42
+
+    (10) expression -> MEDIANA IGL MEDIANA . PUNT ID PNTCOM
+
+    PUNT            shift and go to state 60
+
+
+state 43
+
+    (11) expression -> MODA IGL MODA . PUNT ID PNTCOM
+
+    PUNT            shift and go to state 61
+
+
+state 44
+
+    (12) expression -> MOSTRAR PARIZQ MODA . COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM
+
+    COMA            shift and go to state 62
+
+
+state 45
+
+    (13) expression -> MEDIA IGL MEDIA . PUNT ID PNTCOM
+
+    PUNT            shift and go to state 63
+
+
+state 46
+
+    (14) expression -> VARIANZA IGL VARIANZA . PUNT ID PNTCOM
+
+    PUNT            shift and go to state 64
+
+
+state 47
+
+    (15) expression -> RANGO IGL RANGO . PUNT ID PNTCOM
+
+    PUNT            shift and go to state 65
+
+
+state 48
+
+    (17) expression -> IMPRIMIR PARIZQ TEXTO . PARDER PNTCOM
+
+    PARDER          shift and go to state 66
+
+
+state 49
+
+    (18) expression -> IMPRIMIR PARIZQ CRUZ_V . PARDER PNTCOM
+
+    PARDER          shift and go to state 67
+
+
+state 50
+
+    (19) expression -> IMPRIMIR PARIZQ SUM_V . PARDER PNTCOM
+
+    PARDER          shift and go to state 68
+
+
+state 51
+
+    (1) expression -> VALI PARIZQ ID PARDER . PNTCOM
+
+    PNTCOM          shift and go to state 69
+
+
+state 52
+
+    (6) expression -> ID IGL CORIZQ NUM . COMA NUM CORDER PNTCOM
+
+    COMA            shift and go to state 70
+
+
+state 53
+
+    (16) expression -> ID IGL NUM PNTCOM .
+
+    $end            reduce using rule 16 (expression -> ID IGL NUM PNTCOM .)
+
+
+state 54
+
+    (2) expression -> SUMA_RESULTADO IGL SUM PUNT . ID PUNT ID PNTCOM
+
+    ID              shift and go to state 71
+
+
+state 55
+
+    (3) expression -> RESTA_RESULTADO IGL RES PUNT . ID PUNT ID PNTCOM
+
+    ID              shift and go to state 72
+
+
+state 56
+
+    (4) expression -> MULTIPLICACION_RESULTADO IGL MULT PUNT . ID PUNT ID PNTCOM
+
+    ID              shift and go to state 73
+
+
+state 57
+
+    (5) expression -> DIVISION_RESULTADO IGL DIV PUNT . ID PUNT ID PNTCOM
+
+    ID              shift and go to state 74
+
+
+state 58
+
+    (7) expression -> PRINTER PARIZQ TEXTO PARDER . PNTCOM
+
+    PNTCOM          shift and go to state 75
+
+
+state 59
+
+    (8) expression -> TOTAL IGL ID AND . ID PNTCOM
+
+    ID              shift and go to state 76
+
+
+state 60
+
+    (10) expression -> MEDIANA IGL MEDIANA PUNT . ID PNTCOM
+
+    ID              shift and go to state 77
+
+
+state 61
+
+    (11) expression -> MODA IGL MODA PUNT . ID PNTCOM
+
+    ID              shift and go to state 78
+
+
+state 62
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA . MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM
+
+    MEDIA           shift and go to state 79
+
+
+state 63
+
+    (13) expression -> MEDIA IGL MEDIA PUNT . ID PNTCOM
+
+    ID              shift and go to state 80
+
+
+state 64
+
+    (14) expression -> VARIANZA IGL VARIANZA PUNT . ID PNTCOM
+
+    ID              shift and go to state 81
+
+
+state 65
+
+    (15) expression -> RANGO IGL RANGO PUNT . ID PNTCOM
+
+    ID              shift and go to state 82
+
+
+state 66
+
+    (17) expression -> IMPRIMIR PARIZQ TEXTO PARDER . PNTCOM
+
+    PNTCOM          shift and go to state 83
+
+
+state 67
+
+    (18) expression -> IMPRIMIR PARIZQ CRUZ_V PARDER . PNTCOM
+
+    PNTCOM          shift and go to state 84
+
+
+state 68
+
+    (19) expression -> IMPRIMIR PARIZQ SUM_V PARDER . PNTCOM
+
+    PNTCOM          shift and go to state 85
+
+
+state 69
+
+    (1) expression -> VALI PARIZQ ID PARDER PNTCOM .
+
+    $end            reduce using rule 1 (expression -> VALI PARIZQ ID PARDER PNTCOM .)
+
+
+state 70
+
+    (6) expression -> ID IGL CORIZQ NUM COMA . NUM CORDER PNTCOM
+
+    NUM             shift and go to state 86
+
+
+state 71
+
+    (2) expression -> SUMA_RESULTADO IGL SUM PUNT ID . PUNT ID PNTCOM
+
+    PUNT            shift and go to state 87
+
+
+state 72
+
+    (3) expression -> RESTA_RESULTADO IGL RES PUNT ID . PUNT ID PNTCOM
+
+    PUNT            shift and go to state 88
+
+
+state 73
+
+    (4) expression -> MULTIPLICACION_RESULTADO IGL MULT PUNT ID . PUNT ID PNTCOM
+
+    PUNT            shift and go to state 89
+
+
+state 74
+
+    (5) expression -> DIVISION_RESULTADO IGL DIV PUNT ID . PUNT ID PNTCOM
+
+    PUNT            shift and go to state 90
+
+
+state 75
+
+    (7) expression -> PRINTER PARIZQ TEXTO PARDER PNTCOM .
+
+    $end            reduce using rule 7 (expression -> PRINTER PARIZQ TEXTO PARDER PNTCOM .)
+
+
+state 76
+
+    (8) expression -> TOTAL IGL ID AND ID . PNTCOM
+
+    PNTCOM          shift and go to state 91
+
+
+state 77
+
+    (10) expression -> MEDIANA IGL MEDIANA PUNT ID . PNTCOM
+
+    PNTCOM          shift and go to state 92
+
+
+state 78
+
+    (11) expression -> MODA IGL MODA PUNT ID . PNTCOM
+
+    PNTCOM          shift and go to state 93
+
+
+state 79
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA . COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM
+
+    COMA            shift and go to state 94
+
+
+state 80
+
+    (13) expression -> MEDIA IGL MEDIA PUNT ID . PNTCOM
+
+    PNTCOM          shift and go to state 95
+
+
+state 81
+
+    (14) expression -> VARIANZA IGL VARIANZA PUNT ID . PNTCOM
+
+    PNTCOM          shift and go to state 96
+
+
+state 82
+
+    (15) expression -> RANGO IGL RANGO PUNT ID . PNTCOM
+
+    PNTCOM          shift and go to state 97
+
+
+state 83
+
+    (17) expression -> IMPRIMIR PARIZQ TEXTO PARDER PNTCOM .
+
+    $end            reduce using rule 17 (expression -> IMPRIMIR PARIZQ TEXTO PARDER PNTCOM .)
+
+
+state 84
+
+    (18) expression -> IMPRIMIR PARIZQ CRUZ_V PARDER PNTCOM .
+
+    $end            reduce using rule 18 (expression -> IMPRIMIR PARIZQ CRUZ_V PARDER PNTCOM .)
+
+
+state 85
+
+    (19) expression -> IMPRIMIR PARIZQ SUM_V PARDER PNTCOM .
+
+    $end            reduce using rule 19 (expression -> IMPRIMIR PARIZQ SUM_V PARDER PNTCOM .)
+
+
+state 86
+
+    (6) expression -> ID IGL CORIZQ NUM COMA NUM . CORDER PNTCOM
+
+    CORDER          shift and go to state 98
+
+
+state 87
+
+    (2) expression -> SUMA_RESULTADO IGL SUM PUNT ID PUNT . ID PNTCOM
+
+    ID              shift and go to state 99
+
+
+state 88
+
+    (3) expression -> RESTA_RESULTADO IGL RES PUNT ID PUNT . ID PNTCOM
+
+    ID              shift and go to state 100
+
+
+state 89
+
+    (4) expression -> MULTIPLICACION_RESULTADO IGL MULT PUNT ID PUNT . ID PNTCOM
+
+    ID              shift and go to state 101
+
+
+state 90
+
+    (5) expression -> DIVISION_RESULTADO IGL DIV PUNT ID PUNT . ID PNTCOM
+
+    ID              shift and go to state 102
+
+
+state 91
+
+    (8) expression -> TOTAL IGL ID AND ID PNTCOM .
+
+    $end            reduce using rule 8 (expression -> TOTAL IGL ID AND ID PNTCOM .)
+
+
+state 92
+
+    (10) expression -> MEDIANA IGL MEDIANA PUNT ID PNTCOM .
+
+    $end            reduce using rule 10 (expression -> MEDIANA IGL MEDIANA PUNT ID PNTCOM .)
+
+
+state 93
+
+    (11) expression -> MODA IGL MODA PUNT ID PNTCOM .
+
+    $end            reduce using rule 11 (expression -> MODA IGL MODA PUNT ID PNTCOM .)
+
+
+state 94
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA . MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM
+
+    MEDIANA         shift and go to state 103
+
+
+state 95
+
+    (13) expression -> MEDIA IGL MEDIA PUNT ID PNTCOM .
+
+    $end            reduce using rule 13 (expression -> MEDIA IGL MEDIA PUNT ID PNTCOM .)
+
+
+state 96
+
+    (14) expression -> VARIANZA IGL VARIANZA PUNT ID PNTCOM .
+
+    $end            reduce using rule 14 (expression -> VARIANZA IGL VARIANZA PUNT ID PNTCOM .)
+
+
+state 97
+
+    (15) expression -> RANGO IGL RANGO PUNT ID PNTCOM .
+
+    $end            reduce using rule 15 (expression -> RANGO IGL RANGO PUNT ID PNTCOM .)
+
+
+state 98
+
+    (6) expression -> ID IGL CORIZQ NUM COMA NUM CORDER . PNTCOM
+
+    PNTCOM          shift and go to state 104
+
+
+state 99
+
+    (2) expression -> SUMA_RESULTADO IGL SUM PUNT ID PUNT ID . PNTCOM
+
+    PNTCOM          shift and go to state 105
+
+
+state 100
+
+    (3) expression -> RESTA_RESULTADO IGL RES PUNT ID PUNT ID . PNTCOM
+
+    PNTCOM          shift and go to state 106
+
+
+state 101
+
+    (4) expression -> MULTIPLICACION_RESULTADO IGL MULT PUNT ID PUNT ID . PNTCOM
+
+    PNTCOM          shift and go to state 107
+
+
+state 102
+
+    (5) expression -> DIVISION_RESULTADO IGL DIV PUNT ID PUNT ID . PNTCOM
+
+    PNTCOM          shift and go to state 108
+
+
+state 103
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA . COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM
+
+    COMA            shift and go to state 109
+
+
+state 104
+
+    (6) expression -> ID IGL CORIZQ NUM COMA NUM CORDER PNTCOM .
+
+    $end            reduce using rule 6 (expression -> ID IGL CORIZQ NUM COMA NUM CORDER PNTCOM .)
+
+
+state 105
+
+    (2) expression -> SUMA_RESULTADO IGL SUM PUNT ID PUNT ID PNTCOM .
+
+    $end            reduce using rule 2 (expression -> SUMA_RESULTADO IGL SUM PUNT ID PUNT ID PNTCOM .)
+
+
+state 106
+
+    (3) expression -> RESTA_RESULTADO IGL RES PUNT ID PUNT ID PNTCOM .
+
+    $end            reduce using rule 3 (expression -> RESTA_RESULTADO IGL RES PUNT ID PUNT ID PNTCOM .)
+
+
+state 107
+
+    (4) expression -> MULTIPLICACION_RESULTADO IGL MULT PUNT ID PUNT ID PNTCOM .
+
+    $end            reduce using rule 4 (expression -> MULTIPLICACION_RESULTADO IGL MULT PUNT ID PUNT ID PNTCOM .)
+
+
+state 108
+
+    (5) expression -> DIVISION_RESULTADO IGL DIV PUNT ID PUNT ID PNTCOM .
+
+    $end            reduce using rule 5 (expression -> DIVISION_RESULTADO IGL DIV PUNT ID PUNT ID PNTCOM .)
+
+
+state 109
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA . VARIANZA COMA RANGO PARDER PUNT ID PNTCOM
+
+    VARIANZA        shift and go to state 110
+
+
+state 110
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA . COMA RANGO PARDER PUNT ID PNTCOM
+
+    COMA            shift and go to state 111
+
+
+state 111
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA . RANGO PARDER PUNT ID PNTCOM
+
+    RANGO           shift and go to state 112
+
+
+state 112
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO . PARDER PUNT ID PNTCOM
+
+    PARDER          shift and go to state 113
+
+
+state 113
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER . PUNT ID PNTCOM
+
+    PUNT            shift and go to state 114
+
+
+state 114
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT . ID PNTCOM
+
+    ID              shift and go to state 115
+
+
+state 115
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID . PNTCOM
+
+    PNTCOM          shift and go to state 116
+
+
+state 116
+
+    (12) expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM .
+
+    $end            reduce using rule 12 (expression -> MOSTRAR PARIZQ MODA COMA MEDIA COMA MEDIANA COMA VARIANZA COMA RANGO PARDER PUNT ID PNTCOM .)
+
